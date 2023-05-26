@@ -59,7 +59,7 @@ body.lock {
     }
 }
 .menu__wrapper {
-    position: absolute;
+    position: fixed;
     top: 32px;
     right: 0;
     background: #FFFFFF;
@@ -68,16 +68,16 @@ body.lock {
     width: 312px;
     z-index: 5;
     transition: all 0.3s ease 0s;
-    // transform: translateX(100%);
-    // visibility: hidden;
+    transform: translateX(100%);
+    visibility: hidden;
     a {
         text-decoration: none;
         color: #000;
     }
 }
 ._active {
-    // visibility: visible;
-    // transform: translateX(0);
+    visibility: visible;
+    transform: translateX(0);
 }
 .line__header {
     display: flex;
@@ -92,8 +92,6 @@ body.lock {
     .close__menu {
         width: 16px;
     } 
-}
-.menu__body {
 }
 .menu__list {
     li {
