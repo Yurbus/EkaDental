@@ -89,7 +89,6 @@ body.lock {
   background: #0db3b9;
 }
 
-
 .green__bg {
   display: none;
   position: fixed;
@@ -114,7 +113,6 @@ body.lock {
   width: 312px;
   z-index: 5;
   transition: all 0.3s ease 0s;
-
   transform: translateX(100%);
   visibility: hidden;
   overflow-y: scroll;
