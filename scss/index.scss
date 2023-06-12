@@ -6,9 +6,6 @@ $akcent-color-hover: #0db3b9;
     box-sizing: border-box;
     border: none;
 }
-._lock {
-    overflow: hidden;
-}
 img {
     width: 100%;
 }
@@ -182,10 +179,7 @@ body.lock {
     transition: all .2s ease 0s;
     background: #fff;
     padding: 15px 20px;
-<<<<<<< Updated upstream
-=======
     width: 100%;
->>>>>>> Stashed changes
     li {
         margin-bottom: 15px;
     }
@@ -195,10 +189,6 @@ body.lock {
     transform: translateY(0);
     visibility: visible;
     opacity: 1;
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
 }
 .header__arrow img {
     transition: all .2s ease 0s;
@@ -378,11 +368,7 @@ body.lock {
         line-height: 19px;
         color: #000000;
         width: 200px;
-<<<<<<< Updated upstream
-        padding: 11.5px 25px;
-=======
         padding: 12px 20px 11px;
->>>>>>> Stashed changes
         &:hover {
             background: #e6e6e6;
         }
@@ -412,13 +398,8 @@ body.lock {
 }
 .card__service-wrap.card__service_active>.card__service-open {
     opacity: 1;
-<<<<<<< Updated upstream
-    width: 632px;
-    // height: 396px;
-=======
     width: 638px;
     left: 0;
->>>>>>> Stashed changes
 }
 .card__service-open {
     opacity: 0;
@@ -427,11 +408,9 @@ body.lock {
     top: 0;
     left: -20%;
     z-index: 3;
-<<<<<<< Updated upstream
     width: 0;
     // height: 0;
-=======
->>>>>>> Stashed changes
+
     transition: all .2s ease 0s;
     background: #FFFFFF;
     border-radius: 24px;
@@ -579,11 +558,7 @@ body.lock {
     text-decoration: none;
     margin-top: 58px;
     float: right;
-<<<<<<< Updated upstream
-    padding: 10px 20px;
-=======
     padding: 10px 27px;
->>>>>>> Stashed changes
 }
 .offers__img {
     img {
@@ -652,11 +627,7 @@ body.lock {
     padding: 8px 7px;
 }
 .doc__info {
-<<<<<<< Updated upstream
-    padding-left: 20px;
-=======
     margin-left: 20px;
->>>>>>> Stashed changes
 }
 .doc__name {
     font-weight: 700;
@@ -1169,7 +1140,7 @@ body.lock {
             text-decoration: none;
             margin-top: 44px;
             float: none;
-            padding: 13px 41px;
+            padding: 12px 41px;
             font-size: 12px;
             font-weight: 500;
         }
@@ -1215,12 +1186,6 @@ body.lock {
 
 }
 @media screen and (max-width: 420px) {
-    .num__phome {
-        margin-left: 0;
-    }
-    .header__address {
-        margin-left: 0;
-    }
     .service__cards {
         grid-template-columns: 1fr;
     }
@@ -1268,20 +1233,5 @@ body.lock {
     }
     .slick-arrow {
         top: 94%;
-    }
-    .card__service-wrap.card__service_active > .card__service-open {
-        width: 100%;
-        height: auto;
-        z-index: 999;
-    }
-    .card__list-open {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .card__more {
-        text-decoration: none;
-        float: none;
-        width: 100%;
-        display: flex;
-        justify-content: center;
     }
 }
