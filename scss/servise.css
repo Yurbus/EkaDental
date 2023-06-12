@@ -36,6 +36,11 @@ body.lock {
   overflow: hidden;
 }
 
+._lock {
+  overflow: hidden;
+  margin-right: 17px;
+}
+
 ._main__btn {
   background-color: #0FC0C6;
   padding: 8px 24px;

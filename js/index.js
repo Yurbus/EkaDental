@@ -70,10 +70,9 @@ let menuArrows = document.querySelectorAll('.sub_menu__link');
     };
 
 
-
+// Анимация блока услуг
 const cardServise = document.querySelectorAll('.card__service-wrap');
-console.log(cardServise)
-
+const cardServiseClose = document.querySelector('.card__service-open');
 cardServise.forEach(cardServiceWrap => {
     cardServiceWrap.addEventListener("click", function () {  
         if (cardServiceWrap.classList.contains('card__service_active')) {
@@ -87,12 +86,24 @@ cardServise.forEach(cardServiceWrap => {
                 break
             }
         }
-        
         cardServiceWrap.classList.toggle('card__service_active');
+
     });
 })
 
 
+
+
+
+
+// Анимация спойлера
+$('.faq__controls').click(function(event) {
+    if($('.faq__item').hasClass('one')){
+        $('.faq__controls').not($(this)).removeClass('faq__item-active');
+        $('.faq__item-open').not($(this).next()).slideUp(300);
+    }
+    $(this).toggleClass('faq__item-active').next().slideToggle(300);
+});
 
 
 // $(document).ready(function() {
