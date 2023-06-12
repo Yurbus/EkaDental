@@ -30,7 +30,6 @@ const iconMenu = document.querySelector('.add__class');
 const menuBody = document.querySelector('.menu__wrapper');
 const menuBg = document.querySelector('.green__bg');
 const menuClose = document.querySelector('.close__menu');
-const subMenuOpen = document.querySelector('.sub_menu__link');
 
 if (iconMenu) {
 	iconMenu.addEventListener("click", function (e) {
@@ -39,12 +38,6 @@ if (iconMenu) {
 		menuBody.classList.toggle('_active');
         menuBg.classList.toggle('_active');
         menuClose.classList.remove('_active');
-	});
-}
-if (subMenuOpen) {
-	subMenuOpen.addEventListener("click", function (e) {
-		subMenuOpen.classList.toggle('sub__menu-active');
-        subMenuOpen.classList.remove('sub__menu-active');
 	});
 }
 if (menuClose) {
@@ -64,35 +57,40 @@ let menuArrows = document.querySelectorAll('.sub_menu__link');
         const menuArrow = menuArrows[index];
         menuArrow.addEventListener("click", function (e) {
             menuArrow.parentElement.classList.toggle('sub__menu-active');
-            console.log(menuArrows);
         });
         }
     };
 
 
-
+// Анимация блока услуг
 const cardServise = document.querySelectorAll('.card__service-wrap');
-console.log(cardServise)
-
+const cardServiseClose = document.querySelector('.card__service-open');
 cardServise.forEach(cardServiceWrap => {
     cardServiceWrap.addEventListener("click", function () {  
-        if (cardServiceWrap.classList.contains('card__service_active')) {
-            cardServiceWrap.classList.remove('card__service_active');
-            return
-        }
-
         for (let i = 0; i < cardServise.length; i++) {
             if (cardServise[i].classList.contains('card__service_active')) {
                 cardServise[i].classList.remove('card__service_active')
                 break
             }
         }
-        
         cardServiceWrap.classList.toggle('card__service_active');
+
     });
 })
 
 
+
+
+
+
+// Анимация спойлера
+$('.faq__controls').click(function(event) {
+    if($('.faq__item').hasClass('one')){
+        $('.faq__controls').not($(this)).removeClass('faq__item-active');
+        $('.faq__item-open').not($(this).next()).slideUp(300);
+    }
+    $(this).toggleClass('faq__item-active').next().slideToggle(300);
+});
 
 
 // $(document).ready(function() {

@@ -1,0 +1,1316 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: none;
+}
+
+._lock {
+  overflow: hidden;
+  margin-right: 17px;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  max-width: 1312px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+body {
+  font-family: "Nunito";
+  background: #F4F4F4;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.wrapper {
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100%;
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+._main__btn {
+  background-color: #0FC0C6;
+  padding: 8px 24px;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 30px;
+  color: #fff;
+  cursor: pointer;
+}
+._main__btn img {
+  margin-left: 5px;
+}
+._main__btn:hover {
+  background: #0db3b9;
+}
+
+/*--------------------------------*/
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 22px 0;
+}
+.header a {
+  text-decoration: none;
+  color: #000;
+}
+
+.header__logo {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 33px;
+  text-transform: uppercase;
+}
+
+.burger__btn {
+  background-color: #0FC0C6;
+  padding: 9px 12px;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 8px;
+  color: #fff;
+  margin-right: -100px;
+  cursor: pointer;
+}
+.burger__btn img {
+  margin-left: 5px;
+}
+.burger__btn:hover {
+  background: #0db3b9;
+}
+
+.green__bg {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(10, 147, 152, 0.25);
+}
+
+.green__bg._active {
+  display: block;
+}
+
+.menu__wrapper {
+  position: fixed;
+  top: 32px;
+  right: 0;
+  background: #FFFFFF;
+  border-radius: 24px 0px 0px 24px;
+  padding: 24px 30px;
+  width: 312px;
+  z-index: 5;
+  transition: all 0.3s ease 0s;
+  transform: translateX(100%);
+  visibility: hidden;
+}
+.menu__wrapper a {
+  text-decoration: none;
+  color: #000;
+}
+.menu__wrapper .header__sign-menu {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 26px;
+  color: #fff;
+}
+.menu__wrapper .menu__link,
+.menu__wrapper .sub__link a {
+  text-decoration: none;
+  color: #000;
+}
+.menu__wrapper .menu__link:hover,
+.menu__wrapper .sub__link a:hover {
+  text-decoration: underline;
+}
+
+._active {
+  visibility: visible;
+  transform: translateX(0);
+}
+
+.line__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 44px;
+}
+.line__header .header__logo-menu {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  text-transform: uppercase;
+}
+.line__header .close__menu {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  background: transparent;
+}
+
+.menu__list li {
+  margin-bottom: 44px;
+}
+.menu__list li a img {
+  max-width: 10px;
+}
+
+.menu__link {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__arrow {
+  position: relative;
+}
+
+.sub_menu__link {
+  position: relative;
+}
+
+.sub__menu {
+  position: absolute;
+  visibility: hidden;
+  transform: translateY(30px);
+  opacity: 0;
+  margin-top: 15px;
+  margin-left: -20px;
+  transition: all 0.2s ease 0s;
+  background: #fff;
+  padding: 15px 20px;
+  width: 100%;
+}
+.sub__menu li {
+  margin-bottom: 15px;
+}
+
+.menu__list > li.sub__menu-active .sub__menu {
+  transform: translateY(0);
+  visibility: visible;
+  opacity: 1;
+}
+
+.header__arrow img {
+  transition: all 0.2s ease 0s;
+}
+
+.menu__list > li.sub__menu-active .header__arrow > img {
+  transform: rotate(180deg);
+}
+
+.header__actions a {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 25px;
+  color: #2E363E;
+  border: 1px solid #9B9B9B;
+  border-radius: 8px;
+  padding: 11px 16px;
+}
+.header__actions .header__sign {
+  width: 126px;
+  height: 42px;
+  background: #0FC0C6;
+  border-radius: 40px;
+  padding: 8px 24px;
+  margin-left: 20px;
+  border: none;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 26px;
+  color: #fff;
+  cursor: pointer;
+}
+.header__actions .header__sign:hover {
+  background: #0db3b9;
+}
+
+.num__phome {
+  margin-left: 24px;
+}
+.num__phome img {
+  width: 14px;
+  margin-right: 15px;
+  margin-bottom: -2px;
+}
+
+.header__address {
+  margin-left: 17px;
+}
+.header__address img {
+  width: 14px;
+  margin-right: 15px;
+  margin-bottom: -2px;
+}
+
+.header__sign-menu {
+  padding: 12px 64px;
+  font-size: 14px;
+}
+
+/*-------------------------------------*/
+.page {
+  flex: 1 1 auto;
+}
+
+/*-------------------------------------*/
+._title__h2 {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 130%;
+}
+
+.page__hero {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 15px;
+}
+
+.hero__left {
+  background: #FFFFFF;
+  padding: 50px 32px 32px;
+  border-radius: 24px;
+}
+.hero__left h1 {
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 120%;
+  margin-bottom: 22px;
+}
+.hero__left p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  height: 75px;
+}
+.hero__left .block__btns {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.hero__left .block__btns .free_price {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #2E363E;
+  opacity: 0.8;
+}
+.hero__left .block__btns .hero__btn {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 26px;
+  padding: 12px 24px;
+  margin-top: 10px;
+  text-decoration: none;
+}
+
+.hero__right img {
+  border-radius: 24px;
+  width: 98%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+}
+
+/*-------------- Імпланти Straumann ----------------------*/
+.implants_available {
+  margin-top: 64px;
+}
+
+.available__implant {
+  display: grid;
+  grid-template-columns: 538px 1fr;
+  gap: 15px;
+  margin-top: 32px;
+}
+
+.implant__img img {
+  border-radius: 24px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.implant__text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 44px;
+  background: #FFFFFF;
+  border-radius: 24px;
+}
+.implant__text h2 {
+  margin-bottom: 18px;
+}
+.implant__text p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  color: #2E363E;
+  opacity: 0.8;
+  margin-bottom: 24px;
+  opacity: 0.8;
+}
+.implant__text .pro_higyene {
+  padding-left: 15px;
+  list-style: disc;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  color: #2E363E;
+  opacity: 0.8;
+}
+
+._main__btn {
+  text-decoration: none;
+  padding: 12px 24px;
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+}
+
+.osstem {
+  grid-template-columns: 1fr 538px;
+}
+
+.smile__gallery {
+  margin-top: 32px;
+}
+.smile__gallery h2 {
+  margin-bottom: 32px;
+}
+
+.gallery__block {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+/*-------------- chronology ----------------------*/
+.chronology {
+  margin-top: 64px;
+}
+
+.chronology__title {
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 38px;
+  letter-spacing: -1px;
+  margin-bottom: 32px;
+}
+
+.timeline-item {
+  display: flex;
+  justify-content: center;
+}
+
+.timeline_img {
+  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.border_left {
+  border-right: 4px solid #0FC0C6;
+}
+
+.border_right {
+  border-left: 4px solid #0FC0C6;
+}
+
+.timeline_left {
+  flex: 0 0 446px;
+  padding: 20px;
+  max-width: 446px;
+}
+.timeline_left img {
+  width: 270px;
+}
+.timeline_left p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #2E363E;
+  margin-bottom: 10px;
+}
+
+.vertical_line {
+  background: #0FC0C6;
+  width: 2px;
+  min-height: 100%;
+  position: relative;
+  margin: 0 35px;
+}
+.vertical_line::after {
+  width: 10px;
+  height: 10px;
+  display: block;
+  top: 24px;
+  position: absolute;
+  left: -5.5px;
+  border-radius: 10px;
+  content: "";
+  border: 2px solid #0FC0C6;
+  background: #0FC0C6;
+}
+
+.vertical_line-last {
+  background: linear-gradient(180deg, #0FC0C6 0%, #0FC0C6 10%, #0FC0C6 40%, rgba(230, 230, 230, 0) 100%);
+}
+
+.left_h3 {
+  text-align: right;
+}
+
+.timeline_right {
+  flex: 0 0 446px;
+  padding: 20px 0;
+  position: relative;
+  width: 34.5%;
+}
+.timeline_right h3 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20px;
+  color: #333333;
+}
+.timeline_right p {
+  margin-bottom: 10px;
+}
+
+.mobile_timeline {
+  display: none;
+}
+
+/*-------------- dental_implants ----------------------*/
+.dental_implants {
+  margin: 64px auto 0;
+  max-width: 990px;
+}
+
+.dental_implants-title {
+  text-align: center;
+}
+.dental_implants-title h2 {
+  font-weight: 700;
+  font-size: 25.6px;
+  line-height: 41px;
+  color: #2E363E;
+  margin-bottom: 15px;
+}
+.dental_implants-title p {
+  font-weight: 700;
+  font-size: 19.2px;
+  line-height: 31px;
+  color: #2E363E;
+}
+
+.dental_implants-informaion {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  margin-top: 85px;
+}
+.dental_implants-informaion .dental_implants-img {
+  margin-left: 30px;
+}
+.dental_implants-informaion .dental_implants-text {
+  margin-left: 100px;
+}
+.dental_implants-informaion .dental_implants-text h3 {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 36px;
+  color: #2E363E;
+  margin-bottom: 19px;
+}
+.dental_implants-informaion .dental_implants-text p {
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 28px;
+  color: #2E363E;
+  margin-bottom: 10px;
+}
+
+.who_dental {
+  margin: 100px auto 0;
+  max-width: 990px;
+}
+.who_dental h3 {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 36px;
+  color: #2E363E;
+  margin-bottom: 15px;
+}
+.who_dental p {
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 28px;
+  color: #2E363E;
+  margin-bottom: 15px;
+}
+
+.who_dental-title {
+  font-weight: 700;
+  font-size: 25.6px;
+  line-height: 41px;
+  color: #2E363E;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.who_dental-informaion {
+  display: grid;
+  grid-template-columns: 480px 1fr;
+  margin-top: 85px;
+}
+
+.who_dental-img {
+  margin-right: 35px;
+}
+
+/*-------------- Відновлення зубів ----------------------*/
+.restoration {
+  margin: 100px auto 0;
+  max-width: 990px;
+}
+.restoration h2 {
+  font-weight: 700;
+  font-size: 25.6px;
+  line-height: 41px;
+  color: #2E363E;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.restoration_info-block {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.restoration__left {
+  margin: 0 15px;
+}
+.restoration__left img {
+  max-width: 482px;
+}
+.restoration__left h3 {
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 33px;
+  color: #2E363E;
+  margin-bottom: 15px;
+}
+
+.restoration__list li {
+  margin-bottom: 11px;
+  font-weight: 500;
+  font-size: 17.6px;
+  line-height: 28px;
+}
+.restoration__list li img {
+  width: 18px;
+  margin-right: 10px;
+  margin-bottom: -3px;
+}
+
+.restoration__right {
+  margin: 0 15px;
+}
+.restoration__right img {
+  max-width: 482px;
+}
+.restoration__right h3 {
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 33px;
+  color: #2E363E;
+  margin-bottom: 15px;
+}
+
+.restoration_video {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 35px;
+  margin-top: 60px;
+}
+.restoration_video h3 {
+  text-align: center;
+}
+
+.restoration_video2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 35px;
+}
+
+/*-------------- faq_implants ----------------------*/
+.faq_implants {
+  margin: 100px auto 0;
+  max-width: 990px;
+}
+.faq_implants h2 {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 36px;
+  text-align: center;
+  color: #2E363E;
+  margin-bottom: 20px;
+}
+.faq_implants p {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 33px;
+  text-align: center;
+  color: #2E363E;
+}
+
+/*-------------- FAQ ----------------------*/
+.faq {
+  margin-top: 64px;
+}
+.faq h2 {
+  text-align: center;
+}
+
+.faq__body {
+  max-width: 900px;
+  margin: 32px auto;
+}
+
+.faq__item {
+  padding: 18px 27px;
+  background: #FFFFFF;
+  border-radius: 10px;
+  margin: 12px 0;
+}
+.faq__item .faq__controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.faq__item .faq__controls h3 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  color: #666666;
+}
+.faq__item .faq__controls img {
+  width: 10px;
+  height: 10px;
+}
+
+.arrow__faq {
+  transform: rotate(0deg);
+  transition: all 0.2s ease 0s;
+}
+
+.faq__controls.faq__item-active img {
+  transform: rotate(45deg);
+}
+
+.faq__item-open {
+  margin-top: 30px;
+  display: none;
+}
+.faq__item-open p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 120%;
+  text-align: left;
+}
+
+.faq__item-active {
+  display: block;
+}
+
+/*-------------- doc__info ----------------------*/
+.doc__info {
+  display: grid;
+  grid-template-columns: 388px 1fr;
+  max-width: 960px;
+  margin: 64px auto;
+  background: #FFFFFF;
+  border-radius: 24px;
+  padding: 6px;
+}
+
+.doc__info-img img {
+  border-radius: 24px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.doc__info__text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 32px;
+}
+.doc__info__text h3 {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 33px;
+  color: #2E363E;
+  margin-top: 30px;
+}
+.doc__info__text span {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+  color: #626E86;
+  margin-top: 16px;
+  width: 300px;
+}
+.doc__info__text p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #626E86;
+  margin-top: 30px;
+  height: 150px;
+}
+.doc__info__text .info__btn {
+  padding: 10px 50px;
+  width: 234px;
+  display: flex;
+  justify-content: center;
+  margin-left: 254px;
+  margin-bottom: 15px;
+}
+
+/*-------------- Контакти ----------------------*/
+.contacts {
+  margin: 32px 0 32px;
+}
+
+.contacts__body {
+  display: grid;
+  grid-template-columns: 1fr 540px;
+  gap: 15px;
+}
+
+.page-contacts__block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #FFFFFF;
+  border-radius: 18px;
+  padding: 60px;
+}
+
+.contacts__address {
+  display: flex;
+  margin-bottom: 54px;
+}
+.contacts__address img {
+  width: 64px;
+  margin-right: 32px;
+}
+
+.page-contacts__text h4 {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+}
+.page-contacts__text p {
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 33px;
+}
+.page-contacts__text span {
+  font-size: 20px;
+  font-weight: 700;
+}
+.page-contacts__text ul li a {
+  color: #000;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 33px;
+}
+
+.contacts__telephone {
+  display: flex;
+}
+.contacts__telephone img {
+  width: 64px;
+  margin-right: 32px;
+}
+
+.contacts__cocial {
+  display: flex;
+  flex-direction: column;
+}
+.contacts__cocial img {
+  width: 38px;
+  margin: 16px 0;
+}
+
+iframe {
+  border-radius: 24px;
+}
+
+/*--------------- footer ----------------------*/
+.footer {
+  color: #fff;
+}
+.footer h3 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  margin-bottom: 14px;
+}
+
+.footer__body {
+  background: #0A9398;
+  border-radius: 24px 24px 0px 0px;
+  padding: 71px 69px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 120px;
+}
+
+.footer__logo {
+  max-width: 357px;
+  display: flex;
+  align-items: center;
+}
+
+.list__block {
+  display: flex;
+}
+
+.footer_servise:not(:last-child) {
+  margin-right: 32px;
+}
+
+.footer_servise li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+}
+.footer_servise li a:hover {
+  text-decoration: underline;
+}
+.footer_servise li:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.footer__address {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.footer__address img {
+  width: 32px;
+  margin-right: 16px;
+}
+
+.contacts__text h4 {
+  font-weight: 700;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 14px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+.contacts__text ul li {
+  margin-bottom: 5px;
+}
+.contacts__text ul li a {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 28px;
+  text-decoration-line: underline;
+  color: #FFFFFF;
+}
+
+.footer__telephone {
+  display: flex;
+  align-items: center;
+}
+.footer__telephone img {
+  width: 32px;
+  margin-right: 16px;
+}
+
+/*---------------- popup -----------------------*/
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(2, 25, 26, 0.75);
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
+  top: 0;
+  left: 0;
+  z-index: 20;
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all 0.3s ease 0s;
+}
+
+.popup.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup.open .popup__content {
+  opacity: 1;
+  transform: translate(0px, 0px);
+}
+
+.popup__body {
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup__content {
+  max-width: 100%;
+  margin: 0 10px;
+  position: relative;
+  transition: all 0.3s ease 0s;
+  opacity: 0;
+  transform: translate(0%, 10%);
+}
+
+.popup__close {
+  position: absolute;
+  top: -30px;
+  right: 8px;
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+.form__body {
+  background: #FFFFFF;
+  border-radius: 24px;
+  padding: 44px 90px;
+  text-align: center;
+}
+.form__body p {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+}
+.form__body span {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  display: block;
+  margin-bottom: 40px;
+}
+
+.form__title {
+  font-family: "Nunito";
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 100%;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.form__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__item {
+  margin-bottom: 15px;
+}
+
+.form__input {
+  font-family: "Nunito";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  color: #000000;
+  background: #F2F2F2;
+  border: 1px solid #F2F2F2;
+  border-radius: 24px;
+  padding: 21px;
+  width: 100%;
+  outline: none;
+}
+
+.form__input:focus {
+  box-shadow: 0px 0px 8px 2px rgba(15, 192, 198, 0.2);
+}
+
+.form__item-hidden {
+  display: none;
+}
+
+.descr {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  margin: 15px 0 30px;
+}
+
+.submit {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  color: #FFFFFF;
+  background: #0FC0C6;
+  border-radius: 40px;
+  border: none;
+  box-sizing: border-box;
+  padding: 14px 64px;
+  margin: 15px auto 0;
+  cursor: pointer;
+}
+
+.submit:hover {
+  background: #0eb1b7;
+}
+
+/*===========================================================================================*/
+/*=========== Адаптація під мобільні девайси ================================================*/
+/*===========================================================================================*/
+@media screen and (max-width: 1220px) {
+  .header__actions {
+    display: none;
+  }
+  .burger__btn {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 992px) {
+  .straumann {
+    grid-template-columns: 380px 1fr;
+  }
+  .osstem__text {
+    order: 2;
+  }
+  .timeline_right,
+  .timeline_left {
+    flex: 1 1 446px;
+  }
+  .timeline-item {
+    margin: 20px 0;
+  }
+  .doc__info {
+    grid-template-columns: 270px 1fr;
+  }
+  .doc__info__text p {
+    height: auto;
+  }
+  .doc__info__text .info__btn {
+    margin-left: 0;
+    margin-top: 15px;
+  }
+  .contacts__body {
+    grid-template-columns: 1fr;
+  }
+  iframe {
+    width: 100%;
+  }
+  .footer__body {
+    gap: 50px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .page__hero {
+    grid-template-columns: 1fr;
+  }
+  .hero__left .hero__btn {
+    float: none;
+  }
+  .hero__right img {
+    width: 100%;
+    height: 280px;
+  }
+  .available__implant {
+    grid-template-columns: 1fr;
+  }
+  .implant__img img {
+    height: 360px;
+  }
+  .advantages__items {
+    flex-wrap: wrap;
+  }
+  .why__eka_items {
+    grid-template-columns: 1fr;
+  }
+  .dental_implants-informaion .dental_implants-text {
+    margin-left: 15px;
+  }
+  .doc__info {
+    grid-template-columns: 1fr;
+  }
+  .footer__body {
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+  }
+  .offers__img {
+    height: 340px;
+  }
+}
+@media screen and (max-width: 560px) {
+  .hero__left h1 {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+  .hero__left p {
+    font-size: 14px;
+  }
+  .hero__left .hero__btn {
+    font-size: 14px;
+    margin: 35px 30px 0;
+    display: block;
+    text-align: center;
+  }
+  ._title__h2 {
+    font-size: 24px;
+    line-height: 130%;
+  }
+  .implant__text {
+    flex-direction: column;
+    padding: 24px;
+  }
+  .implant__price {
+    width: 100%;
+    height: 200px;
+    margin-left: 0;
+  }
+  .timeline-item_desctop {
+    display: none;
+  }
+  .mobile_timeline {
+    display: block;
+  }
+  .vertical_line {
+    margin: 0 35px 0 0;
+  }
+  .timeline-item {
+    margin: 0;
+  }
+  .timeline_right {
+    width: 100%;
+  }
+  .dental_implants-informaion {
+    grid-template-columns: 1fr;
+  }
+  .dental_implants-informaion .dental_implants-img {
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 15px;
+  }
+  .who_dental-informaion {
+    grid-template-columns: 1fr;
+  }
+  .restoration_info-block {
+    grid-template-columns: 100%;
+  }
+  .restoration_video {
+    grid-template-columns: 100%;
+  }
+  .contacts__block {
+    padding: 50px 25px;
+  }
+  .page-contacts__block {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 15px;
+  }
+  .contacts__cocial {
+    flex-direction: row;
+    margin-top: 30px;
+  }
+  .contacts__cocial a {
+    margin: 0 10px;
+  }
+  .page-contacts__text p {
+    font-size: 20px;
+  }
+  .page-contacts__text p .page-contacts__text p {
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 33px;
+  }
+  .page-contacts__text p span {
+    font-size: 16px;
+  }
+  .page-contacts__text ul li a {
+    font-size: 18px;
+  }
+  .contacts__address img {
+    width: 50px;
+    margin-right: 22px;
+  }
+  .contacts__telephone img {
+    width: 50px;
+    margin-right: 22px;
+  }
+  .footer__body {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+  .footer__body {
+    padding: 40px;
+  }
+  .footer__telephone {
+    margin-left: 40px;
+  }
+  .form__body {
+    padding: 44px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .diagnosis__right p {
+    margin-left: 67px;
+  }
+  .gallery__block {
+    grid-template-columns: 1fr;
+  }
+  .doc__info__text {
+    margin-left: 15px;
+  }
+  .doc__info__text h3 {
+    font-size: 18px;
+  }
+  .doc__info__text span {
+    font-size: 12px;
+    margin-top: 14px;
+    line-height: 120%;
+  }
+  .doc__info__text p {
+    font-size: 16px;
+    margin-top: 14px;
+  }
+  .doc__info__text .info__btn {
+    margin: 24px auto;
+  }
+  .vertical_line {
+    margin: 0 15px 0 0;
+  }
+}/*# sourceMappingURL=implant_description.css.map */

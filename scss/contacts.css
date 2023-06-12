@@ -36,6 +36,11 @@ body.lock {
   overflow: hidden;
 }
 
+._lock {
+  overflow: hidden;
+  margin-right: 17px;
+}
+
 ._main__btn {
   background-color: #0FC0C6;
   padding: 8px 24px;
@@ -176,21 +181,30 @@ body.lock {
   position: relative;
 }
 
+.sub_menu__link {
+  position: relative;
+}
+
 .sub__menu {
-  display: none;
+  position: absolute;
+  visibility: hidden;
+  transform: translateY(30px);
   opacity: 0;
   margin-top: 15px;
-  margin-left: 10px;
+  margin-left: -20px;
   transition: all 0.2s ease 0s;
+  background: #fff;
+  padding: 15px 20px;
+  width: 100%;
 }
 .sub__menu li {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .menu__list > li.sub__menu-active .sub__menu {
   transform: translateY(0);
+  visibility: visible;
   opacity: 1;
-  display: block;
 }
 
 .header__arrow img {
@@ -279,7 +293,7 @@ body.lock {
 
 /*-------------- Контакти ----------------------*/
 .contacts {
-  margin: 32px 0;
+  margin: 32px 0 100px;
 }
 
 .contacts__body {
@@ -333,10 +347,6 @@ body.lock {
 .contacts__telephone img {
   width: 64px;
   margin-right: 32px;
-}
-
-.contacts__img {
-  border-radius: 24px;
 }
 
 .contacts__cocial {

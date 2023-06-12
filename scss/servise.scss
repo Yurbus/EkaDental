@@ -30,6 +30,10 @@ ul {
 body.lock {
     overflow: hidden;
 }
+._lock {
+    overflow: hidden;
+    margin-right: 17px;
+}
 ._main__btn {
     background-color: $akcent-color;
     padding: 8px 24px;
