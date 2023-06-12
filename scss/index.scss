@@ -6,6 +6,9 @@ $akcent-color-hover: #0db3b9;
     box-sizing: border-box;
     border: none;
 }
+._lock {
+    overflow: hidden;
+}
 img {
     width: 100%;
 }
@@ -66,7 +69,7 @@ body.lock {
 }
 .burger__btn {
     background-color: $akcent-color;
-    padding: 12px;
+    padding: 9px 12px;
     display: inline-flex;
     align-items: center;
     border-radius: 8px;
@@ -104,7 +107,6 @@ body.lock {
     transition: all 0.3s ease 0s;
     transform: translateX(100%);
     visibility: hidden;
-    overflow-y: scroll;
     a {
         text-decoration: none;
         color: #000;
@@ -162,21 +164,28 @@ body.lock {
 .header__arrow {
     position: relative;
 }
+.sub_menu__link {
+    position: relative;
+}
 .sub__menu {
-    display: none;
+    position: absolute;
+    visibility: hidden;
+    transform: translateY(30px);
     opacity: 0;
     margin-top: 15px;
-    margin-left: 10px;
+    margin-left: -20px;
     transition: all .2s ease 0s;
+    background: #fff;
+    padding: 15px 20px;
     li {
-        margin-bottom: 10px;
+        margin-bottom: 15px;
     }
 }
 
 .menu__list > li.sub__menu-active .sub__menu {
     transform: translateY(0);
+    visibility: visible;
     opacity: 1;
-    display: block;
 }
 .header__arrow img {
     transition: all .2s ease 0s;
@@ -192,7 +201,7 @@ body.lock {
         color: #2E363E;
         border: 1px solid #9B9B9B;
         border-radius: 8px;
-        padding: 6px 16px;
+        padding: 11px 16px;
     }
     .header__sign{
         width: 126px;
@@ -319,7 +328,7 @@ body.lock {
     cursor: pointer;
     transition: all .2s;
     &:hover {
-        box-shadow: 0px 3px 8px 2px rgba(0, 0, 0, 0.15);
+        box-shadow: 0px 3px 8px 2px rgba(0, 0, 0, 0.05);
     }
 }
 .card__service{
@@ -356,6 +365,7 @@ body.lock {
         line-height: 19px;
         color: #000000;
         width: 200px;
+        padding: 11.5px 25px;
         &:hover {
             background: #e6e6e6;
         }
@@ -387,7 +397,7 @@ body.lock {
 .card__service-wrap.card__service_active>.card__service-open {
     opacity: 1;
     width: 632px;
-    height: 396px;
+    // height: 396px;
 }
 .card__service-open {
     opacity: 0;
@@ -397,7 +407,7 @@ body.lock {
     left: 0;
     z-index: 3;
     width: 0;
-    height: 0;
+    // height: 0;
     transition: all .2s ease 0s;
     background: #FFFFFF;
     border-radius: 24px;
@@ -544,6 +554,7 @@ body.lock {
     text-decoration: none;
     margin-top: 58px;
     float: right;
+    padding: 10px 20px;
 }
 .offers__img {
     img {
@@ -591,7 +602,7 @@ body.lock {
         }
     }
     li:not(:last-child) {
-        margin-bottom: 35px;
+        margin-bottom: 39px;
     }
 }
 
@@ -610,6 +621,9 @@ body.lock {
     background: #FFFFFF;
     border-radius: 24px;
     padding: 8px 7px;
+}
+.doc__info {
+    padding-left: 20px;
 }
 .doc__name {
     font-weight: 700;
@@ -1107,7 +1121,7 @@ body.lock {
             text-decoration: none;
             margin-top: 44px;
             float: none;
-            padding: 12px 41px;
+            padding: 13px 41px;
             font-size: 12px;
         }
     }
@@ -1149,6 +1163,12 @@ body.lock {
 
 }
 @media screen and (max-width: 420px) {
+    .num__phome {
+        margin-left: 0;
+    }
+    .header__address {
+        margin-left: 0;
+    }
     .service__cards {
         grid-template-columns: 1fr;
     }
@@ -1191,5 +1211,20 @@ body.lock {
     }
     .slick-arrow {
         top: 94%;
+    }
+    .card__service-wrap.card__service_active > .card__service-open {
+        width: 100%;
+        height: auto;
+        z-index: 999;
+    }
+    .card__list-open {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .card__more {
+        text-decoration: none;
+        float: none;
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
 }

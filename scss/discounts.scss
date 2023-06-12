@@ -6,6 +6,9 @@ $akcent-color-hover: #0db3b9;
     box-sizing: border-box;
     border: none;
 }
+._lock {
+    overflow: hidden;
+}
 img {
     width: 100%;
 }
@@ -66,7 +69,7 @@ body.lock {
 }
 .burger__btn {
     background-color: $akcent-color;
-    padding: 12px;
+    padding: 9px 12px;
     display: inline-flex;
     align-items: center;
     border-radius: 8px;
@@ -104,7 +107,6 @@ body.lock {
     transition: all 0.3s ease 0s;
     transform: translateX(100%);
     visibility: hidden;
-    overflow-y: scroll;
     a {
         text-decoration: none;
         color: #000;
@@ -162,21 +164,28 @@ body.lock {
 .header__arrow {
     position: relative;
 }
+.sub_menu__link {
+    position: relative;
+}
 .sub__menu {
-    display: none;
+    position: absolute;
+    visibility: hidden;
+    transform: translateY(30px);
     opacity: 0;
     margin-top: 15px;
-    margin-left: 10px;
+    margin-left: -20px;
     transition: all .2s ease 0s;
+    background: #fff;
+    padding: 15px 20px;
     li {
-        margin-bottom: 10px;
+        margin-bottom: 15px;
     }
 }
 
 .menu__list > li.sub__menu-active .sub__menu {
     transform: translateY(0);
+    visibility: visible;
     opacity: 1;
-    display: block;
 }
 .header__arrow img {
     transition: all .2s ease 0s;
@@ -192,7 +201,7 @@ body.lock {
         color: #2E363E;
         border: 1px solid #9B9B9B;
         border-radius: 8px;
-        padding: 6px 16px;
+        padding: 11px 16px;
     }
     .header__sign{
         width: 126px;
@@ -246,9 +255,9 @@ body.lock {
     line-height: 130%;
 }
 .page__hero {
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0) 100%), url('../img/contacts_bg.jpg') center / cover no-repeat;
+    background: #FFFFFF;
+    padding: 165px 64px;
     border-radius: 24px;
-    height: 350px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -256,82 +265,131 @@ body.lock {
         font-weight: 700;
         font-size: 48px;
         line-height: 65px;
-    }
-}
-
-/*-------------- Контакти ----------------------*/
-
-.contacts {
-    margin: 32px 0;
-}
-.contacts__body {
-    display: grid;
-    grid-template-columns: 1fr 540px;
-    gap: 15px;
-}
-.page-contacts__block {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #FFFFFF;
-    border-radius: 18px;
-    padding: 60px;
-}
-.contacts__address {
-    display: flex;
-    margin-bottom: 54px;
-    img {
-        width: 64px;
-        margin-right: 32px;
-    }
-}
-.page-contacts__text {
-    h4 {
-        font-weight: 600;
-        font-size: 14px;
-        line-height: 19px;
+        text-transform: uppercase;
     }
     p {
-        font-weight: 800;
-        font-size: 24px;
-        line-height: 33px;
+        font-weight: 200;
+        font-size: 18px;
+        line-height: 25px;
     }
-    span {
-        font-size: 20px;
+    .hero__btn {
         font-weight: 700;
+        font-size: 16px;
+        line-height: 26px;
+        padding: 8px 32px;
+        margin-top: 35px;
+        text-decoration: none;
     }
-    ul {
-        li {
-            a {
-                color: #000;
-                font-weight: 800;
-                font-size: 24px;
-                line-height: 33px;
-            }
+}
+
+.hero__actions {
+    margin-top: 30px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    a {
+        background: #FFFFFF;
+        border: 1px solid #F4F4F4;
+        border-radius: 8px;
+        color: #000;
+        text-decoration: none;
+        padding: 8px 16px;
+        font-size: 10px;
+        width: 200px;
+        margin-bottom: 6px;
+        display: flex;
+        img {
+            margin-right: 15px;
+        }
+    }
+    .num__phome {
+        font-size: 12px;
+    }
+}
+
+/*-------------- hygiene ----------------------*/
+.hygiene {
+    margin-top: 40px;
+}
+.hygiene__body {
+}
+.hygiene__row {
+    display: grid;
+    grid-template-columns: 2fr 317px;
+    gap: 15px;
+}
+.hygiene__left {
+    background: #FFFFFF;
+    border-radius: 24px;
+    padding: 8px;
+    display: flex;
+    img {
+        max-width: 398px;
+    }
+    .hygiene__offer {
+        padding: 36px 44px;
+        h2 {
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 44px;
+            margin-bottom: 8px;
+            letter-spacing: -1px;
+        }
+        p {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 28px;
+            color: #2E363E;
+            opacity: 0.8;
+            margin-bottom: 140px;
+        }
+        .hygiene__btn {
+            padding: 13px 60px;
         }
     }
 }
-.contacts__telephone {
-    display: flex;
-    img {
-        width: 64px;
-        margin-right: 32px;
-    }
-}
-.contacts__img {
+.hygiene__right {
+    background: #0FC0C6;
     border-radius: 24px;
-}
-.contacts__left {
-
-}
-.contacts__cocial {
+    padding: 32px 24px;
     display: flex;
     flex-direction: column;
-    img {
-        width: 38px;
-        margin: 16px 0;
+    justify-content: space-between;
+    h3 {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 38px;
+        letter-spacing: -1px;
+        color: #FFFFFF;
+        max-width: 180px;
     }
+    p {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 21px;
+        text-align: right;
+        color: #FFFFFF;
+        max-width: 230px;
+        margin-left: 40px;
+        margin-bottom: 130px;
+    }
+    .card__more {
+        background: #fff;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 19px;
+        color: #000000;
+        width: 202px;
+        padding: 11.5px 25px;
+        text-decoration: none;
+        img {
+            width: 12px;
+            margin-left: 16px;
+        }
+    }
+    
 }
+
 
 /*--------------- footer ----------------------*/
 .footer {
@@ -572,57 +630,17 @@ body.lock {
         margin-right: 0;
     }
 }
+@media screen and (max-width: 1170px) {
 
+}
 @media screen and (max-width: 992px) {
-    .service__cards {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    .contacts__body {
-        grid-template-columns: 1fr;
-    }
-    iframe {
-        width: 100%;
-    }
-    .page-contacts__block {
-        flex-direction: column;
-    }
-    .contacts__cocial {
-        flex-direction: row;
-        margin-top: 30px;
-        a {
-            margin: 0 20px;
-        }
-    }
-    .page-contacts__text p {
-        max-width: 328px;
-    }
 
     .footer__body {
         gap: 50px;
     }
 }
 @media screen and (max-width: 768px) {
-    .page__hero {
-        text-align: center;
-        padding: 100px 64px;
-    }
-    .hero__actions {
-        display: flex;
-        margin-top: 100px;
-    }
-    .service__cards {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .card__service-wrap {
-        max-width: 100%;
-    }
-    .fast__write h3 {
-        font-size: 26px;
-    }
-    .offer__cart {
-        display: flex;
-        flex-direction: column-reverse;
-    }
+
     .footer__body {
         grid-template-columns: 1fr 1fr;
         gap: 70px;
@@ -630,45 +648,12 @@ body.lock {
     .offers__img {
         height: 340px;
     }
-    .goal__cart {
-        grid-template-columns: 1fr;
-    }
-    .goal__img {
-        max-height: 400px;
-    }
 
 }
 
-@media screen and (max-width: 560px) {
-    .card__service-wrap {
-        height: 100%;
-    }
-    .contacts__block {
-        padding: 50px 25px;
-    }
-    .page-contacts__text p {
-        font-size: 20px;
-        .page-contacts__text p {
-            font-weight: 800;
-            font-size: 18px;
-            line-height: 33px;
-        }
-        span {
-            font-size: 16px;
-        }
-    }
-    .page-contacts__text ul li a {
-        font-size: 18px;
-    }
-    .contacts__address img {
-        width: 50px;
-        margin-right: 22px;
-    }
-    .contacts__telephone img {
-        width: 50px;
-        margin-right: 22px;
-    }
 
+
+@media screen and (max-width: 560px) {
 
     .footer__body {
         grid-template-columns: 1fr;
@@ -686,7 +671,5 @@ body.lock {
 
 }
 @media screen and (max-width: 420px) {
-    .service__cards {
-        grid-template-columns: 1fr;
-    }
+
 }
