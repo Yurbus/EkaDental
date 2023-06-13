@@ -667,9 +667,18 @@ body.lock {
   border-radius: 24px;
   padding: 8px 7px;
 }
+.cart__doctor .cart__img img {
+  border-radius: 22px;
+  height: 376px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
 
 .doc__info {
   margin-left: 20px;
+  height: 70px;
 }
 
 .doc__name {

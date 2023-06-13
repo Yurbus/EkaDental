@@ -571,14 +571,16 @@ body.lock {
   margin: 64px auto;
   background: #FFFFFF;
   border-radius: 24px;
-  padding: 6px;
+  padding: 6px 6px 0px;
 }
 
 .doc__info-img img {
-  border-radius: 24px;
-  height: 100%;
+  border-radius: 20px;
+  height: 372px;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
 }
 
 .doc__info__text {
