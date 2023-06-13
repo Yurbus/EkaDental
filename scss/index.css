@@ -384,6 +384,7 @@ body.lock {
   line-height: 16px;
   color: #FFFFFF;
   height: 100%;
+  text-align: right;
 }
 .fast__write a {
   background: #fff;
@@ -1133,6 +1134,11 @@ body.lock {
   }
   .fast__write h3 {
     font-size: 26px;
+    margin-right: 86px;
+  }
+  .fast__write p {
+    margin-left: 55px;
+    margin-top: 10px;
   }
   .offer__cart {
     display: flex;
@@ -1178,6 +1184,9 @@ body.lock {
     padding: 12px 13px 11px;
     display: flex;
     justify-content: center;
+  }
+  .fast__write p {
+    height: 95px;
   }
   .price__title {
     font-size: 24px;
