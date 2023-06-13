@@ -66,7 +66,11 @@ let menuArrows = document.querySelectorAll('.sub_menu__link');
 const cardServise = document.querySelectorAll('.card__service-wrap');
 const cardServiseClose = document.querySelector('.card__service-open');
 cardServise.forEach(cardServiceWrap => {
-    cardServiceWrap.addEventListener("click", function () {  
+    cardServiceWrap.addEventListener("click", function () { 
+        if (cardServiceWrap.classList.contains("card__service_active")) {
+            cardServiceWrap.classList.remove("card__service_active");
+        return 
+        } 
         for (let i = 0; i < cardServise.length; i++) {
             if (cardServise[i].classList.contains('card__service_active')) {
                 cardServise[i].classList.remove('card__service_active')
