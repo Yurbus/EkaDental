@@ -101,7 +101,9 @@ body.lock {
   height: 100%;
   top: 0;
   left: 0;
-  background: rgba(10, 147, 152, 0.25);
+  background: linear-gradient(90deg, rgba(2, 25, 26, 0.9) 0%, rgba(2, 25, 26, 0.81) 104.2%);
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
 }
 
 .green__bg._active {
@@ -111,20 +113,20 @@ body.lock {
 
 .menu__wrapper {
   position: fixed;
-  top: 32px;
-  right: 0;
-  background: #FFFFFF;
-  border-radius: 24px 0px 0px 24px;
-  padding: 24px 30px;
-  width: 312px;
+  top: 50px;
+  left: 0;
+  padding: 40px 30px;
+  border-radius: 0 24px 24px 0;
+  background: #192525;
+  width: 410px;
   z-index: 5;
-  transition: all 0.3s ease 0s;
-  transform: translateX(100%);
+  transition: all 0.2s ease 0s;
+  transform: translateX(-100%);
   visibility: hidden;
 }
 .menu__wrapper a {
   text-decoration: none;
-  color: #000;
+  color: #fff;
 }
 .menu__wrapper .header__sign-menu {
   font-weight: 700;
@@ -135,7 +137,7 @@ body.lock {
 .menu__wrapper .menu__link,
 .menu__wrapper .sub__link a {
   text-decoration: none;
-  color: #000;
+  color: #fff;
 }
 .menu__wrapper .menu__link:hover,
 .menu__wrapper .sub__link a:hover {
@@ -166,7 +168,10 @@ body.lock {
 }
 
 .menu__list li {
-  margin-bottom: 44px;
+  margin-bottom: 30px;
+}
+.menu__list li a {
+  font-size: 24px;
 }
 .menu__list li a img {
   max-width: 10px;
@@ -193,12 +198,15 @@ body.lock {
   margin-top: 15px;
   margin-left: -20px;
   transition: all 0.2s ease 0s;
-  background: #fff;
+  background: #192525;
   padding: 15px 20px;
-  width: 100%;
+  width: 85%;
 }
 .sub__menu li {
   margin-bottom: 15px;
+}
+.sub__menu li a {
+  font-size: 16px;
 }
 
 .menu__list > li.sub__menu-active .sub__menu {
@@ -667,6 +675,7 @@ body.lock {
   background: #FFFFFF;
   border-radius: 24px;
   padding: 8px 7px;
+  transition: all 0.3s ease 0s;
 }
 .cart__doctor .cart__img img {
   border-radius: 22px;
@@ -675,6 +684,11 @@ body.lock {
      object-fit: cover;
   -o-object-position: top;
      object-position: top;
+}
+.cart__doctor:hover {
+  cursor: pointer;
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.1);
+  transform: translate(0, -5px);
 }
 
 .doc__info {
@@ -725,6 +739,7 @@ body.lock {
   background: #FFFFFF;
   border-radius: 24px;
   padding: 8px;
+  height: 325px;
 }
 
 .review__cart {
@@ -800,7 +815,7 @@ body.lock {
 /*------ arrow -------*/
 .slick-arrow {
   position: absolute;
-  top: 91%;
+  top: 93%;
   z-index: 10;
   font-size: 0;
   width: 72px;
@@ -1167,6 +1182,12 @@ body.lock {
   }
 }
 @media screen and (max-width: 560px) {
+  .menu__list li {
+    margin-bottom: 50px;
+  }
+  .sub__menu .sub__link {
+    margin-bottom: 25px;
+  }
   ._title__h2 {
     font-size: 24px;
   }
