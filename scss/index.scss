@@ -567,7 +567,8 @@ body.lock {
     text-decoration: none;
     margin-top: 58px;
     float: right;
-    padding: 10px 27px;
+    padding: 12px 27px;
+    font-weight: 600;
 }
 .offers__img {
     img {
@@ -676,7 +677,7 @@ body.lock {
     text-decoration: none;
     font-weight: 700;
     font-size: 16px;
-    padding: 10px 28px;
+    padding: 12px 28px;
 }
 
 /*---------- Відгуки наших клієнтів ----------------------*/
@@ -692,10 +693,11 @@ body.lock {
     background: #FFFFFF;
     border-radius: 24px;
     padding: 8px;
-    height: 325px;
+    min-height: 370px;
 }
 .review__cart {
     display: flex;
+    height: 320px;
 }
 .review__img {
     img {
@@ -720,9 +722,10 @@ body.lock {
 }
 .review__descr {
     font-style: italic;
-    font-weight: 200;
-    font-size: 12px;
-    line-height: 16px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 19px;
+    color: #000;
 }
 .rating {
     text-align: left;
@@ -757,7 +760,7 @@ body.lock {
 /*------ arrow -------*/
 .slick-arrow {
     position: absolute;
-    top: 93%;
+    top: 94.5%;
     z-index: 10;
     font-size: 0;
     width: 72px;
@@ -766,11 +769,11 @@ body.lock {
 }
 .slick-arrow.slick-prev {
     background: url('../img/svg/sl_arrow_left.svg') 0 0 / 100% no-repeat;
-    left: 40%;
+    left: 38%;
 } 
 .slick-arrow.slick-next {
     background: url('../img/svg/sl_arrow_right.svg') 0 0 / 100% no-repeat;
-    right: 40%;
+    right: 38%;
 }
 /*------ dots -------*/
 .slick-dots {
@@ -845,7 +848,7 @@ body.lock {
             text-decoration: none;
             color: #fff;
             font-weight: 500;
-            font-size: 12px;
+            font-size: 14px;
             line-height: 16px;
             &:hover {
                 text-decoration: underline;
@@ -1201,11 +1204,11 @@ body.lock {
     }
     .slick-arrow.slick-prev {
         background: url('../img/svg/sl_arrow_left.svg') 0 0 / 100% no-repeat;
-        left: 20%;
+        left: 10%;
     } 
     .slick-arrow.slick-next {
         background: url('../img/svg/sl_arrow_right.svg') 0 0 / 100% no-repeat;
-        right: 20%;
+        right: 10%;
     }
     .partners__items {
         grid-template-columns: repeat(2, 1fr);
@@ -1244,6 +1247,7 @@ body.lock {
     }
     .review__cart {
         flex-direction: column;
+        height: auto;
     }
     .review__name {
         padding-left: 16px;
@@ -1269,7 +1273,7 @@ body.lock {
     .review__img img {
         width: 100%;
         margin-right: 0;
-        height: 180px;
+        height: 260px;
         object-fit: cover;
         border-radius: 24px;
     }
@@ -1280,6 +1284,6 @@ body.lock {
         justify-content: flex-end;
     }
     .slick-arrow {
-        top: 94%;
+        top: 95.5%;
     }
 }
