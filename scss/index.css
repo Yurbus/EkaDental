@@ -435,6 +435,7 @@ body.lock {
 .card__service-wrap.card__service_active > .card__service-open {
   opacity: 1;
   width: 638px;
+  height: 398px;
   left: 0;
   z-index: 4;
 }
@@ -498,7 +499,7 @@ body.lock {
 
 .card__more {
   text-decoration: none;
-  margin-top: 30px;
+  margin-top: 20%;
   float: right;
 }
 .card__more img {
@@ -1281,7 +1282,7 @@ body.lock {
   .card__service-wrap.card__service_active > .card__service-open {
     opacity: 1;
     width: 100%;
-    height: auto;
+    height: 100%;
   }
   .card__service-wrap.card__service_active > .card__service-open._4th {
     opacity: 1;
