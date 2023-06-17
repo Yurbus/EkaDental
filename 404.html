@@ -4,10 +4,10 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>EKA DENTAL CLINIC </title>
+        <title>EKA DENTAL CLINIC | Акції</title>
 
         <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="scss/our_works.css">
+        <link rel="stylesheet" href="scss/404.css">
         <link rel="stylesheet" href="scss/magnific-popup.css">
     </head>
     <body>
@@ -43,8 +43,8 @@
                                     <li class="sub__link"><a href="service_surgery.html">Хірургія</a></li>
                                 </ul>
                             </li>
-                            <li><a class="menu__link" href="discounts.html">Акції</a></li>
-                            <li><a class="menu__link" href="#">Робота наших лікарів</a></li>
+                            <li><a class="menu__link" href="#">Акції</a></li>
+                            <li><a class="menu__link" href="our_works.html">Робота наших лікарів</a></li>
                             <li><a class="menu__link" href="contacts.html">Контакти</a></li>
                         </ul>
                     </nav>
@@ -54,38 +54,21 @@
             <main class="page">
                 <div class="container">
                     <section class="page__hero">
-                        <h1>Роботи наших лікарів</h1>
-                    </section>
-
-                    <section class="page__gallery">
-                        <div class="gallery__container">
-                            
-                            <ul class="gallery__list">
-                                <li class="gallery__link gallery__active" data-source="all">Всі фото</li>
-                                <li class="gallery__link" data-source="vinirs">Вініри</li>
-                                <li class="gallery__link" data-source="implants">Імплантація</li>
-                                <li class="gallery__link" data-source="machines">Професійна гігієна</li>
-                                <li class="gallery__link" data-source="whiting">Відбілювання</li>
-                                </ul>
-                        
-                                <div class="gallery">
-                                    <a href="img/works/work-1.jpg" class="gallery__item is-open" data-source="machines"><img src="img/works/work-1.jpg" alt="Photo"></a>
-                                    <a href="img/works/work-1.jpg" class="gallery__item is-open" data-source="vinirs"><img src="img/works/work-1.jpg" alt="Photo"></a>
-                                    <a href="img/works/work-2.jpg" class="gallery__item" data-source="vinirs"><img src="img/works/work-2.jpg" alt="Photo"></a>                               
-                                    <a href="img/works/work-2.jpg" class="gallery__item" data-source="vinirs"><img src="img/works/work-2.jpg" alt="Photo"></a>
-                                    <a href="img/works/work-3.jpg" class="gallery__item" data-source="machines"><img src="img/works/work-3.jpg" alt="Photo"></a>
-                                    <a href="img/works/work-3.jpg" class="gallery__item" data-source="machines"><img src="img/works/work-3.jpg" alt="Photo"></a>
-                                    <a href="img/works/work-4.jpg" class="gallery__item" data-source="whiting"><img src="img/works/work-4.jpg" alt="Photo"></a>
-                                    <a href="img/works/work-4.jpg" class="gallery__item" data-source="whiting"><img src="img/works/work-4.jpg" alt="Photo"></a>                                  
-                                    <a href="img/works/work-3.jpg" class="gallery__item" data-source="implants"><img src="img/works/work-3.jpg" alt="Photo"></a>
-                                    <a href="img/works/work-3.jpg" class="gallery__item" data-source="implants"><img src="img/works/work-3.jpg" alt="Photo"></a>
-                                    <a href="img/works/work-4.jpg" class="gallery__item" data-source="implants"><img src="img/works/work-4.jpg" alt="Photo"></a>
-                                </div>
-                        
-                            <button type="button" class="gallery__btn _main__btn">Завантажити ще</button>
+                        <div class="hero__left-info">
+                            <h1>Упс...</h1>
+                            <h2>Кепські справи</h2>
+                            <p>Сторінка яку ви намагаєтесь відкрити в данний момент відсутня.
+                                Спробуйте повернутись на головну, та пошукати ще!</p>
+                            <div class="hero__btns">
+                                <a class="primary_btn" href="index.html">На головну</a>
+                                <a class="second_btn" href="">Повідомити про сбій</a>
+                            </div>
+                        </div>
+                        <div class="hero__right-info">
+                            <span>код помилки:</span>
+                            <h2>404</h2>
                         </div>
                     </section>
-
                 </div>
             </main>
             <footer class="footer">
@@ -177,8 +160,6 @@
         <script src="js/slider.js"></script>
         <script src="js/popups.js"></script>
         <script src="js/jquery.inputmask.js"></script>
-        <script src="js/gallery.js"></script>
-        <script src="js/magnificPopup.min.js"></script>
         <script>
             $(document).ready(function () {
                 $("#phone").inputmask({"mask": "+38 (999) 999-99-99"});
@@ -187,14 +168,6 @@
                 $("#phone_4").inputmask({"mask": "+38 (999) 999-99-99"});
             });
         </script>
-        <script>
-            $(".gallery").magnificPopup({
-                delegate: "a",
-                    type : 'image',
-                    gallery : {
-                    enabled : true
-                }
-                });
-        </script>
     </body>
 </html>
+

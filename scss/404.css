@@ -6,11 +6,6 @@
   border: none;
 }
 
-._lock {
-  overflow: hidden;
-  margin-right: 17px;
-}
-
 img {
   width: 100%;
 }
@@ -39,6 +34,11 @@ ul {
 
 body.lock {
   overflow: hidden;
+}
+
+._lock {
+  overflow: hidden;
+  margin-right: 17px;
 }
 
 ._main__btn {
@@ -79,7 +79,7 @@ body.lock {
 
 .burger__btn {
   background-color: #0FC0C6;
-  padding: 9px 12px;
+  padding: 12px;
   display: inline-flex;
   align-items: center;
   border-radius: 8px;
@@ -230,7 +230,7 @@ body.lock {
   color: #2E363E;
   border: 1px solid #9B9B9B;
   border-radius: 8px;
-  padding: 11px 16px;
+  padding: 6px 16px;
 }
 .header__actions .header__sign {
   width: 126px;
@@ -281,267 +281,88 @@ body.lock {
 /*-------------------------------------*/
 ._title__h2 {
   font-weight: 700;
-  font-size: 26px;
+  font-size: 38px;
   line-height: 130%;
 }
 
 .page__hero {
-  margin-top: 60px;
-  display: grid;
-  grid-template-columns: 50% 50%;
-  gap: 15px;
-}
-
-.hero__left {
-  background: #FFFFFF;
-  padding: 50px 32px 32px;
+  background: #fff;
   border-radius: 24px;
-}
-.hero__left h1 {
-  font-weight: 700;
-  font-size: 38px;
-  line-height: 120%;
-  margin-bottom: 22px;
-}
-.hero__left p {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 130%;
-  height: 75px;
-}
-.hero__left .block__btns {
-  margin-top: 15px;
+  height: 720px;
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-.hero__left .block__btns .free_price {
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 16px;
-  color: #2E363E;
-  opacity: 0.8;
-}
-.hero__left .block__btns .hero__btn {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 26px;
-  padding: 12px 24px;
-  margin-top: 10px;
-  text-decoration: none;
-}
-
-.hero__right img {
-  border-radius: 24px;
-  width: 98%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 100%;
-}
-
-/*-------------- Імпланти Osstem ----------------------*/
-.implants_available {
-  margin-top: 64px;
-}
-
-.implant_osstem-block {
-  max-width: 960px;
-  margin: 64px auto 0;
-}
-.implant_osstem-block .osstem__title {
-  text-align: center;
-  font-weight: 700;
-  font-size: 38px;
-  line-height: 130%;
-}
-
-.available__implant {
-  display: grid;
-  grid-template-columns: 470px 1fr;
-  gap: 15px;
-  margin-top: 32px;
   align-items: center;
+  justify-content: space-around;
+  margin-bottom: 100px;
 }
-
-.implant__img-descr img {
-  border-radius: 24px;
+.page__hero .hero__left-info {
+  margin-right: 30px;
 }
-
-.implant__img img {
-  height: 340px;
-  -o-object-fit: cover;
-     object-fit: cover;
+.page__hero .hero__left-info h1 {
+  font-weight: 900;
+  font-size: 84px;
+  line-height: 100%;
 }
-
-.implant__text {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 5px 35px;
-}
-.implant__text h2 {
-  color: #2E363E;
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 19px;
-}
-.implant__text p {
-  font-weight: 500;
-  font-size: 17px;
-  line-height: 140%;
-  color: #2E363E;
-  opacity: 0.8;
-  margin-bottom: 24px;
-  opacity: 0.8;
-}
-.implant__text .pro_higyene {
-  padding-left: 15px;
-  list-style: disc;
-  font-weight: 500;
-  font-size: 17px;
-  line-height: 130%;
-  color: #2E363E;
-}
-
-._main__btn {
-  text-decoration: none;
-  padding: 12px 24px;
-  font-weight: 700;
-  font-size: 16px;
-  text-align: center;
-}
-
-.osstem {
-  grid-template-columns: 1fr 470px;
-}
-.osstem .implant__text {
-  padding: 5px 35px 5px 0;
-}
-
-/*-------------- doc__info ----------------------*/
-.doc__info {
-  display: grid;
-  grid-template-columns: 388px 1fr;
-  max-width: 960px;
-  margin: 64px auto;
-  background: #FFFFFF;
-  border-radius: 24px;
-  padding: 6px;
-}
-
-.doc__info-img img {
-  border-radius: 24px;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.doc__info__text {
-  display: flex;
-  flex-direction: column;
-  margin-left: 32px;
-}
-.doc__info__text h3 {
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 33px;
-  color: #2E363E;
-  margin-top: 30px;
-}
-.doc__info__text span {
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 25px;
-  color: #626E86;
-  margin-top: 16px;
-  width: 300px;
-}
-.doc__info__text p {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 22px;
-  color: #626E86;
-  margin-top: 30px;
-  height: 150px;
-}
-.doc__info__text .info__btn {
-  padding: 10px 50px;
-  width: 234px;
-  display: flex;
-  justify-content: center;
-  margin-left: 254px;
-  margin-bottom: 15px;
-}
-
-/*-------------- Контакти ----------------------*/
-.contacts {
-  margin: 32px 0 32px;
-}
-
-.contacts__body {
-  display: grid;
-  grid-template-columns: 1fr 540px;
-  gap: 15px;
-}
-
-.page-contacts__block {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #FFFFFF;
-  border-radius: 18px;
-  padding: 60px;
-}
-
-.contacts__address {
-  display: flex;
-  margin-bottom: 54px;
-}
-.contacts__address img {
-  width: 64px;
-  margin-right: 32px;
-}
-
-.page-contacts__text h4 {
+.page__hero .hero__left-info h2 {
   font-weight: 600;
+  font-size: 32px;
+  line-height: 120%;
+}
+.page__hero .hero__left-info p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 120%;
+  max-width: 590px;
+  margin-top: 8px;
+}
+.page__hero .hero__left-info .hero__btns {
+  margin-top: 32px;
+}
+.page__hero .hero__left-info .hero__btns a {
+  text-decoration: none;
+  font-weight: 700;
   font-size: 14px;
   line-height: 19px;
 }
-.page-contacts__text p {
-  font-weight: 800;
-  font-size: 24px;
-  line-height: 33px;
+.page__hero .hero__left-info .hero__btns .primary_btn {
+  background-color: #0FC0C6;
+  padding: 12px 24px;
+  font-size: 14px;
+  align-items: center;
+  border-radius: 30px;
+  margin: 10px;
+  color: #F9F9F9;
+  cursor: pointer;
+  transition: all 0.2s ease 0s;
 }
-.page-contacts__text span {
-  font-size: 20px;
-  font-weight: 700;
+.page__hero .hero__left-info .hero__btns .primary_btn:hover {
+  background: #0eafb5;
 }
-.page-contacts__text ul li a {
+.page__hero .hero__left-info .hero__btns .second_btn {
+  height: 42px;
+  border: 1px solid #0FC0C6;
+  border-radius: 40px;
+  padding: 9px 24px;
+  margin: 10px;
+  font-weight: 200;
+  font-size: 14px;
+  line-height: 26px;
   color: #000;
-  font-weight: 800;
-  font-size: 24px;
-  line-height: 33px;
+  cursor: pointer;
+  transition: all 0.2s ease 0s;
 }
-
-.contacts__telephone {
-  display: flex;
+.page__hero .hero__left-info .hero__btns .second_btn:hover {
+  background: #0FC0C6;
+  color: #fff;
 }
-.contacts__telephone img {
-  width: 64px;
-  margin-right: 32px;
+.page__hero .hero__right-info span {
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 120%;
 }
-
-.contacts__cocial {
-  display: flex;
-  flex-direction: column;
-}
-.contacts__cocial img {
-  width: 38px;
-  margin: 16px 0;
-}
-
-iframe {
-  border-radius: 24px;
+.page__hero .hero__right-info h2 {
+  font-weight: 900;
+  font-size: 164px;
+  line-height: 90%;
 }
 
 /*--------------- footer ----------------------*/
@@ -779,64 +600,34 @@ iframe {
   }
 }
 @media screen and (max-width: 992px) {
-  .straumann {
-    grid-template-columns: 380px 1fr;
-  }
-  .osstem {
-    grid-template-columns: 380px 1fr;
-  }
-  .osstem__text {
-    order: 2;
-  }
-  .timeline_right,
-  .timeline_left {
-    flex: 1 1 446px;
-  }
-  .timeline-item {
-    margin: 20px 0;
-  }
-  .doc__info {
-    grid-template-columns: 270px 1fr;
-  }
-  .doc__info__text p {
-    height: auto;
-  }
-  .doc__info__text .info__btn {
-    margin-left: 0;
-    margin-top: 15px;
-  }
-  .contacts__body {
-    grid-template-columns: 1fr;
-  }
-  iframe {
-    width: 100%;
-  }
   .footer__body {
     gap: 50px;
   }
 }
 @media screen and (max-width: 768px) {
   .page__hero {
-    grid-template-columns: 1fr;
+    flex-direction: column-reverse;
   }
-  .hero__left .hero__btn {
-    float: none;
+  .page__hero {
+    height: 100%;
   }
-  .hero__right img {
-    width: 100%;
-    height: 280px;
+  .page__hero .hero__left-info {
+    margin-right: 0;
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 30px;
   }
-  .available__implant {
-    grid-template-columns: 1fr;
+  .hero__right-info {
+    margin-top: 40px;
   }
-  .implant__img img {
-    height: 360px;
+  .hero__left-info .hero__btns {
+    margin: 32px auto;
+    flex-direction: column;
+    width: 200px;
+    text-align: center;
   }
-  .implant__text {
-    padding: 5px 0;
-  }
-  .doc__info {
-    grid-template-columns: 1fr;
+  .hero__left-info .hero__btns a {
+    display: block;
   }
   .footer__body {
     grid-template-columns: 1fr 1fr;
@@ -845,102 +636,21 @@ iframe {
   .offers__img {
     height: 340px;
   }
+  .goal__cart {
+    grid-template-columns: 1fr;
+  }
+  .goal__img {
+    max-height: 400px;
+  }
 }
 @media screen and (max-width: 560px) {
-  .hero__left h1 {
-    font-size: 24px;
-    margin-bottom: 8px;
+  .page__hero .hero__right-info h2 {
+    font-size: 120px;
   }
-  .hero__left p {
-    font-size: 14px;
-  }
-  .hero__left .hero__btn {
-    font-size: 14px;
-    margin: 35px 30px 0;
-    display: block;
-    text-align: center;
-  }
-  ._title__h2 {
-    font-size: 24px;
-    line-height: 130%;
-  }
-  .implant__text {
-    flex-direction: column;
-    padding: 24px;
-  }
-  .implant__price {
-    width: 100%;
-    height: 200px;
-    margin-left: 0;
-  }
-  .timeline-item_desctop {
-    display: none;
-  }
-  .mobile_timeline {
-    display: block;
-  }
-  .vertical_line {
-    margin: 0 35px 0 0;
-  }
-  .timeline-item {
-    margin: 0;
-  }
-  .timeline_right {
-    width: 100%;
-  }
-  .dental_implants-informaion {
-    grid-template-columns: 1fr;
-  }
-  .dental_implants-informaion .dental_implants-img {
-    margin-left: 30px;
-    margin-right: 30px;
-    margin-bottom: 15px;
-  }
-  .who_dental-informaion {
-    grid-template-columns: 1fr;
-  }
-  .restoration_info-block {
-    grid-template-columns: 100%;
-  }
-  .restoration_video {
-    grid-template-columns: 100%;
-  }
-  .contacts__block {
-    padding: 50px 25px;
-  }
-  .page-contacts__block {
-    display: flex;
-    flex-direction: column;
-    padding: 30px 15px;
-  }
-  .contacts__cocial {
-    flex-direction: row;
-    margin-top: 30px;
-  }
-  .contacts__cocial a {
-    margin: 0 10px;
-  }
-  .page-contacts__text p {
-    font-size: 20px;
-  }
-  .page-contacts__text p .page-contacts__text p {
-    font-weight: 800;
-    font-size: 18px;
-    line-height: 33px;
-  }
-  .page-contacts__text p span {
-    font-size: 16px;
-  }
-  .page-contacts__text ul li a {
-    font-size: 18px;
-  }
-  .contacts__address img {
-    width: 50px;
-    margin-right: 22px;
-  }
-  .contacts__telephone img {
-    width: 50px;
-    margin-right: 22px;
+  .page__hero .hero__left-info h1 {
+    font-weight: 900;
+    font-size: 70px;
+    line-height: 100%;
   }
   .footer__body {
     grid-template-columns: 1fr;
@@ -955,33 +665,4 @@ iframe {
   .form__body {
     padding: 44px;
   }
-}
-@media screen and (max-width: 420px) {
-  .diagnosis__right p {
-    margin-left: 67px;
-  }
-  .gallery__block {
-    grid-template-columns: 1fr;
-  }
-  .doc__info__text {
-    margin-left: 15px;
-  }
-  .doc__info__text h3 {
-    font-size: 18px;
-  }
-  .doc__info__text span {
-    font-size: 12px;
-    margin-top: 14px;
-    line-height: 120%;
-  }
-  .doc__info__text p {
-    font-size: 16px;
-    margin-top: 14px;
-  }
-  .doc__info__text .info__btn {
-    margin: 24px auto;
-  }
-  .vertical_line {
-    margin: 0 15px 0 0;
-  }
-}/*# sourceMappingURL=implant_osstem.css.map */
+}/*# sourceMappingURL=404.css.map */
