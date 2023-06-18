@@ -1291,8 +1291,15 @@ body.lock {
     .card__service-wrap.card__service_active>.card__service-open._4th {
         opacity: 1;
         width: 100%;
-        height: auto;
+        // height: auto;
+        height: 450px;
         left: 0;
+    }
+    .card__list-open {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .card__service-wrap.card__service_active > .card__service-open {
+        height: 450px;
     }
     .review__cart {
         flex-direction: column;
