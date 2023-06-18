@@ -376,6 +376,8 @@ body.lock {
         color: #000000;
         width: 200px;
         padding: 12px 20px 11px;
+        display: flex;
+        justify-content: center;
         &:hover {
             background: #e6e6e6;
         }
@@ -1275,7 +1277,7 @@ body.lock {
         margin-left: 30px;
     }
     .form__body {
-        padding: 44px;
+        padding: 30px;
     }
 
 }
@@ -1291,8 +1293,15 @@ body.lock {
     .card__service-wrap.card__service_active>.card__service-open._4th {
         opacity: 1;
         width: 100%;
-        height: auto;
+        // height: auto;
+        height: 450px;
         left: 0;
+    }
+    .card__list-open {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .card__service-wrap.card__service_active > .card__service-open {
+        height: 450px;
     }
     .review__cart {
         flex-direction: column;
